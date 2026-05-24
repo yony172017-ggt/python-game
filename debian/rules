@@ -1,0 +1,5 @@
+#!/usr/bin/env dh_python3
+#DH_VERBOSE=1
+
+%:
+	dh $@ --with python3
