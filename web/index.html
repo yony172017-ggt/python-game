@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Python Game - Web Edition</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>🎮 Python Game - Web Edition</h1>
+            <p>Play the game in your browser!</p>
+        </header>
+
+        <div class="game-content">
+            <div class="game-panel">
+                <h2>Game Status</h2>
+                <div class="status-box">
+                    <div class="player-info">
+                        <p><strong>Player:</strong> <span id="playerName">Hero</span></p>
+                        <p><strong>Health:</strong> <span id="health">100</span>/100</p>
+                        <p><strong>Score:</strong> <span id="score">0</span></p>
+                        <p><strong>Level:</strong> <span id="level">1</span></p>
+                    </div>
+                    <div class="position-info">
+                        <p>Position: (<span id="posX">0</span>, <span id="posY">0</span>)</p>
+                    </div>
+                </div>
+
+                <h2>Game Log</h2>
+                <div class="log-box" id="gameLog">
+                    <p class="log-entry">Game started. Welcome!</p>
+                </div>
+            </div>
+
+            <div class="controls-panel">
+                <h2>Controls</h2>
+                <div class="button-group">
+                    <button class="btn btn-primary" onclick="movePlayer()">Move 🎯</button>
+                    <button class="btn btn-danger" onclick="attack()">Attack ⚔️</button>
+                    <button class="btn btn-success" onclick="heal()">Heal ❤️</button>
+                    <button class="btn btn-secondary" onclick="resetGame()">Reset 🔄</button>
+                </div>
+
+                <h2>Player Setup</h2>
+                <div class="input-group">
+                    <input type="text" id="playerNameInput" placeholder="Enter player name" value="Hero">
+                    <button class="btn btn-info" onclick="setPlayerName()">Set Name</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="stats-panel">
+            <h2>Game Statistics</h2>
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <h3>Total Damage</h3>
+                    <p id="totalDamage">0</p>
+                </div>
+                <div class="stat-card">
+                    <h3>Enemies Defeated</h3>
+                    <p id="enemiesDefeated">0</p>
+                </div>
+                <div class="stat-card">
+                    <h3>Times Healed</h3>
+                    <p id="timesHealed">0</p>
+                </div>
+                <div class="stat-card">
+                    <h3>Game Time</h3>
+                    <p id="gameTime">0s</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="game.js"></script>
+</body>
+</html>
